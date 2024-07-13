@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
-import { Alert, AlertService, AlertType } from './alert.service';
+import { Alert, AlertService, AlertType } from "./alert.service";
 
 @Component({
-    selector: 'app-alert',
-    templateUrl: 'alert.component.html',
-    styleUrls: ['alert.component.scss'],
+    selector: "app-alert",
+    templateUrl: "alert.component.html",
+    styleUrls: ["alert.component.scss"],
 })
 export class AlertComponent implements OnInit {
     alerts: Alert[] = [];
@@ -34,11 +34,11 @@ export class AlertComponent implements OnInit {
 
         switch (alert.type) {
             case AlertType.Success:
-                return 'alert alert-success';
+                return "alert alert-success";
             case AlertType.Error:
-                return 'alert alert-danger';
+                return "alert alert-danger";
             default:
-                return 'alert alert-success';
+                return "alert alert-success";
         }
     }
 }

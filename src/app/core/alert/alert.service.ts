@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Router, NavigationStart } from '@angular/router';
-import { Observable, Subject } from 'rxjs';
+import { Injectable } from "@angular/core";
+import { Router, NavigationStart } from "@angular/router";
+import { Observable, Subject } from "rxjs";
 
 export interface Alert {
     type: AlertType;
