@@ -1,0 +1,12 @@
+.language-area {
+    align-items: flex-end;
+    margin-bottom: 24px;
+
+    button:not(:last-child) {
+        margin-right: 8px;
+    }
+}
+
+.bg-exchange {
+    background-color: #009688;
+}
