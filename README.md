@@ -1,49 +1,19 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-![PWA Shields](https://www.pwa-shields.com/1.0.0/series/classic/white/gray.svg)
-
 # Currency Exchange Project
 
-Currency Exchange Project designed and developed by Osman Fikret Ceylan.
+Currency Exchange Project designed and developed by Hesham Eid Ali.
 
-## Usage
-
-### Using the project on live environment
-
-The final app hosted on [https://currencyexchange.work](https://currencyexchange.work).
-
-### Using the project on local environment and using it on Stackblitz
-
-Simply go to this URL: [https://stackblitz.com/github/ofcyln/currency-exchange](https://stackblitz.com/github/ofcyln/currency-exchange)
-
-Stackblitz can only show you the visible UI of the project without cloning it to your local environment. Please not that, for security reasons `Stackblitz` doesn't show images, fonts or font icons that used on the project.
-
----
 
 Run these commands in the terminal to run the app on your local environment
 
-    git clone https://github.com/ofcyln/currency-exchange.git
+    git clone https://github.com/heshamelrefy/currency-exchange.git
 
-    npm install
-
-    npm start
-
-or if you use yarn as package manager
-
-    git clone https://github.com/ofcyln/currency-exchange.git
-
-    yarn
-
-    yarn start
+    npm install --force
 
 ### Development server
 
-Run `npm start` or `yarn start` for a dev server to initialize.
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ### Running scripts
-
-To build the app in `Ahead-Of-Time compilation` you need to run `yarn build:prod` or `npm run build:prod`
 
 To run linter and check the code over tslint rules simply run `yarn lint` or `npm run lint`
 
@@ -56,11 +26,9 @@ Run `ng generate component component-name` to generate a new component. If you d
 Run `yarn build:prod` or `npm run build:prod` to build the project.
 The build artifacts will be stored in the `dist/` directory.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
 ## App's Architecture
 
--   Used latest Angular CLI v14.0.2
+-   Used latest Angular CLI v17.3.5
 
 -   Used code scaffolding for effective working and clean development environment. Specialized `build`, `deploy`, `lint`, `pre-commit` scripts added to package.json.
 
@@ -74,7 +42,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 -   Used `Angular Services` for sharing app state and data-binding within injected components.
 
--   Used latest `Bootstrap v4.3.1` version to integrate powerful responsive design powered by CSS FlexBox model.
+-   Used latest `Bootstrap v5.3.3` version to integrate powerful responsive design powered by CSS FlexBox model.
 
 -   Used `semantic` HTML tags and elements with semantic class names.
 
@@ -94,34 +62,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 -   PWA integration has been made for the installation of the app to the devices which supports installation.
 
-## Motivation of Choices on Implementation
 
--   The form immediately responses to user interactions with its `validation` checkers.
-
--   `tabindex` values added for form elements in a numeric order to complete the form just with the use of keyboard for accessibility.
-
--   `Enter` key press in the selection of currencies helps users to select the currency that they want to exchange easily.
-
--   In case of navigating to a page which doesn't exist in the app, a `wildcard route (404)` is integrated to the project. It redirects users to the `Not Found` page.
-
--   Form data is sent asynchronously by `HTTP POST request` with `RxJS` observables. The `HTTP POST request` posts the form data to URL `./login`. I also created an interface for a hypothetical response from the server for this request. A refactor must be done when a backend is ready to make it work in a live environment.
-
--   Used `localStorage` to store user's currency exchanges with a key:value pair namely `exchangeRates` and an array of exchanged currency information objects. Also, localStorage used to store `token`.
-
--   Whenever a user enters to the `Converter` page, an asynchronous `HTTP GET request` runs for `https://api.exchangerate.host/latest?base=USD` API.
-
--   User can convert between selected currencies with the defined amount.
-
--   Each conversion immediately goes to the `Exchange History` datatable with the exact time of the execution.
-
--   In `Exchange History` field there is `Duration` select box which user can select the defined time intervals. Under the Duration select box, there are two datatable as well. First one includes `Date` datatable -execution date and time- and the second one includes `Exchange Rate` datatable -statistics of the conversions in selected time intervals-.
-
--   On `History` page user can see the previous currency exchanges on datatable with the amount of the executions. User can `Delete` the selected item of the datatable or can click to `View` button to create previous exchange scenario on the `Converter` page.
-
--   Mobile device UI behaviours designed to improve User Experience in a performing way and coded with the usage of the @media queries.
-
--   `PWA` support helps users to install the app on their mobile phone and make them use it as a native app. With the integration of `PWA`, it is possible to use the app even if there is no connection to the internet. The offline mode makes the app run under unexpected circumstances. `PWA` integration caches the files with the developer choices. Mostly static files for example image files, icons, font libraries etc.
-
--   `Angular production build configuration` is used for optimizing bundle, using tree-shaking, aot compilation, compression.
-
--   The total bundle size of the app is `~500KB` including all CSS, JS, FONT, ICONS for PWA and HTML files.

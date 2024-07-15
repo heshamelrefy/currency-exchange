@@ -16,21 +16,7 @@ export interface LanguageList {
 })
 export class LanguageButtonsComponent implements OnInit {
     public languages: LanguageList[] = [
-        {
-            abbreviation: 'en',
-            name: 'English',
-            gap: '',
-        },
-        {
-            abbreviation: 'nl',
-            name: 'Dutch',
-            gap: 'ml-1',
-        },
-        {
-            abbreviation: 'tr',
-            name: 'Turkish',
-            gap: 'ml-1 mr-1',
-        },
+        
     ];
 
     constructor(public translate: TranslateService, public languageService: LanguageService) {}
