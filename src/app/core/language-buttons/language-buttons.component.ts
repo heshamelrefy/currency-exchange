@@ -15,9 +15,7 @@ export interface LanguageList {
     styleUrls: ['./language-buttons.component.scss'],
 })
 export class LanguageButtonsComponent implements OnInit {
-    public languages: LanguageList[] = [
-        
-    ];
+    public languages: LanguageList[] = [];
 
     constructor(public translate: TranslateService, public languageService: LanguageService) {}
 
